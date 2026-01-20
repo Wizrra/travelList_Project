@@ -120,7 +120,35 @@ form input{
   color: white;
 }
 
+.display{
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+li {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+li button{
+  background: transparent;
+  border: none;
+  color: white;
+  
+}
+
 footer{
   padding: 1rem;
-  background-color: skyblue;
+  background-color: #f4a226;
+}
+
+footer h1{
+  font-size: 1rem;
+  /* color: white; */
 }
