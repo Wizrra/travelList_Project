@@ -6,6 +6,17 @@
   box-sizing: border-box;
 }
 
+:root{
+  --form: #e5771f;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  height: 100vh;
+}
+
 header {
   font-family: "Monoton", sans-serif;
   background-color: #f4a226;
@@ -20,36 +31,48 @@ header h1{
 
 main{
   font-family: "Manrope", system-ui;
-  padding: 1rem;
+  /* padding: 1rem; */
   background-color: #5a3e2b;
   color: #fff;
+  flex: 1;
 }
 
 form{
   display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* gap: 10px; */
+  /* max-width: 600px; */
+  background-color: #e5771f;
+  padding: 1rem;
+}
+form > div{
+  display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
-  
+  gap: 20px;
 }
 
+
 @media screen and (min-width: 650px) {
-  form {
+  form > div{
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin: auto;
+    /* justify-content: space-between;  */
+    /* margin: auto; */
+    /* gap: 20px; */
+    /* border: 1px solid; */
   }
-
+  
   .select_amount{
     width: 50%;
     
   } 
-
+  
   .select_amount p{
     text-wrap: nowrap;
   }
-
+  
+  
   .add_trip{
     width: 50%;
     /* width: 100%; */
@@ -58,13 +81,21 @@ form{
   
 }
 
+
 form .select_amount{
   display: flex;
   gap: 15px;
-
+  
   /* justify-content: ; */
 } 
 
+select{
+  /* width: 50px; */
+  padding: 2px 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
 
 .add_trip{
   display: flex;
@@ -73,4 +104,23 @@ form .select_amount{
 
 form input{
   width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 0 0.7rem;
+  font-size: 18px;
+}
+
+.add_trip button{
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: blue;
+  color: white;
+}
+
+footer{
+  padding: 1rem;
+  background-color: skyblue;
 }
