@@ -6,6 +6,8 @@ export default function Form({addNewItem}) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    
+
     addNewItem({ amount, item });
   }
 
