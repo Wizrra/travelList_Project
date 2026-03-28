@@ -14,13 +14,19 @@
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
-  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  /* height: 0; */
 }
 
 header {
   font-family: "Monoton", sans-serif;
   background-color: #f4a226;
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* min-height: 0; */
 }
 
 header h1{
@@ -29,11 +35,6 @@ header h1{
   text-align: center;
 }
 
-footer{
-  display: flex-column;
-  align-items: center;
-  justify-content: space-between;
-}
 
 
 
@@ -49,6 +50,10 @@ main{
   background-color: #5a3e2b;
   color: #fff;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* overflow: auto; */
+  min-height: 0;
 }
 
 form{
@@ -60,6 +65,9 @@ form{
   background-color: #e5771f;
   padding: 1rem;
   /* gap: 46px; */
+  /* position: sticky;
+  top: 0; */
+  
 }
 
 form > div{
@@ -103,10 +111,11 @@ form > div{
 }
 
 
-form .select_amount{
+.select_amount{
   display: flex;
   gap: 15px;
   align-items: center;
+ 
 } 
 
 .select{
@@ -164,6 +173,12 @@ form input{
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 1rem;
+  overflow: auto;
+  /* min-height: screen-height; */
+  flex: 1;
+  
+  
 }
 
 .display p{
@@ -174,7 +189,10 @@ form input{
 ul {
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto; */
   /* gap: 20px; */
 }
 
@@ -199,6 +217,8 @@ footer{
   gap: 16px;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 
