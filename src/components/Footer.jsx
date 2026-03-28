@@ -4,7 +4,11 @@ import Header from './Header'
 export default function Footer() {
   return (
     <footer>
-      <h1>We help you remember everything you need for your trip ✈</h1>
+
+      
+        <h1>🌴 far away 💼</h1>
+        <h4>We help you remember everything you need for your trip ✈</h4>
+ 
 
     </footer>
   )

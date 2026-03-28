@@ -4,6 +4,8 @@ import Form from "./Form";
 import { toast } from "react-toastify";
 
 export default function Main() {
+  const [item, setItem] = useState("");
+  const [amount, setAmount] = useState("1");
   const [listOfItems, setListOfItems] = useState([]);
 
   function handleAddNewItem(newItem) {
@@ -23,7 +25,7 @@ export default function Main() {
 
   return (
     <main>
-      <Form addNewItem={handleAddNewItem} />
+      <Form addNewItem={handleAddNewItem} item={item} setItem={setItem} amount={amount} setAmount={setAmount}/>
       <Display list={listOfItems} deleteItem={handleRemoveItem} />
     </main>
   );

@@ -3,6 +3,7 @@ import React from "react";
 export default function Display({ list, deleteItem }) {
   return (
     <div className="display">
+      <p>Your items shows here...</p>
       <ul>
         {list.map((x, i) => (
           <li key={i}>

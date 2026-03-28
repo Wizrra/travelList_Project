@@ -1,8 +1,7 @@
-import { useState } from "react";
+// import React from "react";
 
-export default function Form({addNewItem}) {
-  const [item, setItem] = useState("");
-  const [amount, setAmount] = useState("1");
+export default function Form({addNewItem, item, amount, setAmount, setItem}) {
+  
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,7 +15,8 @@ export default function Form({addNewItem}) {
       <div>
         <div className="select_amount">
           <p>What do you need for your 😍 trip?</p>
-          <select
+          <div className="select">
+            <select
             name="Amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
@@ -27,11 +27,13 @@ export default function Form({addNewItem}) {
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
+          </div>
         </div>
 
         <div className="add_trip">
           <input
             type="text"
+            placeholder="Type in your items"
             value={item}
             onChange={(e) => setItem(e.target.value)}
           />
